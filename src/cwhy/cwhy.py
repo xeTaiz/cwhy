@@ -162,7 +162,7 @@ def cwhy_prompt(fix):
 
             {ctx.abridged_diagnostic}
 
-            Suggest code to fix the problem. Surround the code in backticks (```).
+            Tell me in which file and line the error occurs (File:Line) and suggest code to fix the problem. Surround the code in backticks (```).
             """
         else:
             user_prompt = f"""
@@ -174,8 +174,7 @@ def cwhy_prompt(fix):
 
             {ctx.abridged_diagnostic}
 
-            What's the problem?
+            What's the problem and in which file and line does it occur?
             """
 
         return user_prompt
-
