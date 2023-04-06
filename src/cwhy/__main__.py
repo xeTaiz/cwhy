@@ -13,8 +13,8 @@ def main(fix):
         # Do nothing if nothing was sent to stdin
         return
     text = asyncio.run(cwhy.complete(prompt))
+    print(f'Compiler Output:\n{text}\n')
     if fix:
         print(cwhy.word_wrap_except_code_blocks(text))
     else:
         print('\n'.join(textwrap.wrap(text, width=70)))
-
